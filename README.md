@@ -33,7 +33,7 @@ Architecture of Application
 Setup
 ---------------------------------------
 
-###Requirements
+### Requirements
 Things you will need:
   - Amazon Echo (With developer mode turned on)
   - Amazon Web Services Account (free)
@@ -44,7 +44,7 @@ Things you will need:
   - NodeJS
   - adb (Android Development Kit)
 
-###Configure Alexa Skills App(https://developer.amazon.com/edw/home.html#/skills/list)
+### Configure Alexa Skills App(https://developer.amazon.com/edw/home.html#/skills/list)
   - Add New Skill
   - Pick a good invocation name, I use "tv"
   - Endpoint
@@ -58,17 +58,17 @@ Things you will need:
     - Use utterances in resources/utterances.sample
   - Everything else is optional, as you will not be publishing your app
   
-###Create Firebase Access (https://firebase.com)
+### Create Firebase Access (https://firebase.com)
   - Utilize `$projectRoot/resources/firebase-rules.json`
   - Generate new secret key under secrets menu
   
-###Write Configuration JSON
+### Write Configuration JSON
   - Setup fill out `$projectRoot/resources/config.sample.json` to `$projectRoot/resources/config.json`
   - Copy or symlink `$projectRoot/resources/config.json` to 
     - `$projectRoot/client/` folder 
     - `$projectRoot/lambda/` folder 
 
-###Create Amazon Lambda 
+### Create Amazon Lambda 
   - Generate zip file: `cd lambda; zip ../lambda.zip *; cd -`
   - Go to https://console.aws.amazon.com/lambda/home
   - Make sure you are in North East Region (Required for Alexa)
@@ -90,7 +90,7 @@ Things you will need:
     - You should now be able to communicate with your Alexa using the invocation name you have
     - The events should show up in firebase.
 
-###Run Local NodeJS ADB Connection
+### Run Local NodeJS ADB Connection
   - Run `npm install` to prep application
   - Run `node client/` to run application
     - It uses port scanning to find IP address of firetv stick
@@ -119,7 +119,7 @@ Next Steps
   * Figure out if integrating with chromecast would be feasible
      * Should just be a different set of `adb` commands
      
-###Completed
+### Completed
   * Install the node client on my Raspberry Pi to act as Firebase event listener
     * Should allow me to use this with other Skills if I make more
     * Verify code works properly on nodejs version available for Raspberry Pi
